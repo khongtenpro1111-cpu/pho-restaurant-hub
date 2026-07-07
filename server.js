@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 // Cấu hình bắt buộc để Server đọc được dữ liệu JSON và dữ liệu từ Form gửi lên
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencgit pushoded({ extended: true }));
 
 // Lệnh cấu hình gánh toàn bộ file giao diện tĩnh trong thư mục public
 app.use(express.static(path.join(__dirname, 'public')));

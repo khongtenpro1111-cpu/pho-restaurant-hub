@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Trị Nhà Hàng Phở</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .sidebar { height: 100vh; background: #212529; color: white; padding-top: 20px; }
+        .main-content { padding: 30px; }
+        .card { border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-radius: 12px; }
+        .table thead { background-color: #0d6efd; color: white; }
+        .status-badge { padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; background: #e9ecef; }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 sidebar d-none d-md-block">
+                <h4 class="text-center mb-4">AD-Phở</h4>
+                <nav class="nav flex-column">
+                    <a class="nav-link text-white active" href="#"><i class="fas fa-home me-2"></i> Tổng quan</a>
+                    <a class="nav-link text-white" href="#"><i class="fas fa-utensils me-2"></i> Đơn Đặt Bàn</a>
+                    <a class="nav-link text-white" href="#"><i class="fas fa-users me-2"></i> Khách hàng</a>
+                </nav>
+            </div>
+            <div class="col-md-10 main-content">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2>Danh Sách Đặt Bàn Thực Tế</h2>
+                    <button class="btn btn-primary" onclick="loadData()"><i class="fas fa-sync-alt"></i> Làm mới</button>
+                </div>
+                <div class="card p-4">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Khách Hàng</th>
+                                    <th>Số Điện Thoại</th>
+                                    <th>Ngày Đến</th>
+                                    <th>Số Khách</th>
+                                    <th>Thời Gian Đặt</th>
+                                    <th>Trạng Thái</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-body">
+                                </tbody>
+                        </table>
+                    </div>
+                    <div id="no-data" class="text-center py-5 d-none">
+                        <img src="https://cdn-icons-png.flaticon.com/512/7486/7486744.png" width="100" class="mb-3">
+                        <p class="text-muted">Chưa có khách nào đặt bàn đâu anh Kiên ơi!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function loadData() {
+            try {
+                const response = await fetch('/api/danh-sach');
+                const data = await response.json();
+                const tableBody = document.getElementById('table-body');
+                const noData = document.getElementById('no-data');
+
+                tableBody.innerHTML = '';
+
+                if (data.length === 0) {
+                    noData.classList.remove('d-none');
+                } else {
+                    noData.classList.add('d-none');
+                    data.forEach(item => {
+                        tableBody.innerHTML += `
+                            <tr>
+                                <td><strong>#${item.id}</strong></td>
+                                <td>${item.name}</td>
+                                <td><span class="text-primary">${item.phone}</span></td>
+                                <td>${item.date}</td>
+                                <td><span class="badge bg-info text-dark">${item.guests} người</span></td>
+                                <td><small class="text-muted">${item.thoiGianDat}</small></td>
+                                <td><span class="status-badge">Chờ xác nhận</span></td>
+                            </tr>
+                        `;
+                    });
+                }
+            } catch (error) {
+                console.error("Lỗi load dữ liệu Admin:", error);
+            }
+        }
+        // Tự động load dữ liệu khi mở trang
+        loadData();
+    </script>
+</body>
+</html>
