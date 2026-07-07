@@ -19,21 +19,21 @@ let danhSachDatBan = [];
 app.post('/api/dat-ban', (req, res) => {
     const { name, phone, date, guests } = req.body;
 
-    // Tạo một đối tượng đơn đặt bàn mới kèm ID tự tăng và thời gian gieo đơn
+    // Tên biến được viết hoàn toàn bằng tiếng Việt không dấu để chạy mượt mà trên Cloud
     const donDatBanMoi = {
         id: danhSachDatBan.length + 1,
         name,
         phone,
         date,
         guests,
-        thoiGianDat: new Date().toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Minh' })
+        thoiGianDat: new Date().toLocaleString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' })
     };
 
     // Lưu vào bộ nhớ mảng trên Server
     danhSachDatBan.push(donDatBanMoi);
 
-    // In ra màn hình Terminal của PyCharm để anh theo dõi thời gian thực
-    console.log("🔥 [Server] Có đơn đặt bàn mới tinh nè anh Kiên:", donDatBanMoi);
+    // In ra màn hình Terminal của PyCharm hoặc Logs của Render để theo dõi thời gian thực
+    console.log("🔥 [Server] Co don dat ban moi tinh:", donDatBanMoi);
 
     // Phản hồi kết quả thành công về cho trình duyệt của khách
     res.json({
@@ -42,7 +42,7 @@ app.post('/api/dat-ban', (req, res) => {
     });
 });
 
-// API công khai để lấy toàn bộ danh sách khách đã đặt bàn
+// API để mình lấy toàn bộ danh sách khách đã đặt bàn
 app.get('/api/danh-sach', (req, res) => {
     res.json(danhSachDatBan);
 });
