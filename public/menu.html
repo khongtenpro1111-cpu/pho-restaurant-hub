@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực Đơn Phở</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Custom CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Header -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">Nhà Hàng Phở</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="menuListDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Thực Đơn
+                                </a>
+                                <ul class="dropdown-menu " aria-labelledby="menuListDropdown">
+                                    <li><a class="dropdown-item" href="menu.html">Phở</a></li>
+                                    <li><a class="dropdown-item" href="menu2.html">Nước Uống</a></li>
+                                    <li><a class="dropdown-item" href="menu3.html">Món Ăn Phụ</a></li>
+                                </ul>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="menuListDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Hot-News
+                                </a>
+                                <ul class="dropdown-menu " aria-labelledby="menuListDropdown">
+                                    <li><a class="dropdown-item" href="promotions.html">Khuyến Mãi</a></li>
+                                    <li><a class="dropdown-item" href="tin-tuc.html">Tin Tức</a></li>
+                                    <li><a class="dropdown-item" href="about.html">Giới Thiệu</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="menuListDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Đặt Bàn
+                                </a>
+                                <ul class="dropdown-menu " aria-labelledby="menuListDropdown">
+                                    <li><a class="dropdown-item" href="reservation.html">Đặt Bàn</a></li>
+                                    <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                                    <li><a class="dropdown-item" href="login.html">Đăng Nhập</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section text-center py-5">
+            <div class="container">
+                <h1 class="display-4 hero-title">Chào Mừng Đến Nhà Hàng Phở</h1>
+                <p class="lead">Khám Phá Hương Vị Phở Tuyệt Vời Của Chúng Tôi</p>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="menu-section text-center py-5">
+            <div class="container">
+                
+
+                <!-- Phở Bò -->
+                <section class="menu-category mb-5">
+                    <h2 class="display-4">Thực Đơn Phở</h2>
+                    <h3 class="category-title"> Phở Bò</h3>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="menu-item">
+                                <img src="images/pho-bo-tai.jpg" alt="Phở Bò Tái" class="img-fluid">
+                                <h4>Phở Bò Tái</h4>
+                                <p>Mì phở với thịt bò tái, nước dùng trong và thơm ngon, kèm rau thơm và gia vị.</p>
+                                <p class="price">Giá: 50,000 VNĐ</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="menu-item">
+                                <img src="images/pho-bo-chin.jpg" alt="Phở Bò Chín" class="img-fluid">
+                                <h4>Phở Bò Chín</h4>
+                                <p>Mì phở với thịt bò chín mềm, nước dùng đậm đà và hương vị đặc trưng.</p>
+                                <p class="price">Giá: 55,000 VNĐ</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="menu-item">
+                                <img src="images/pho-bo-gan.jpg" alt="Phở Bò Gân" class="img-fluid">
+                                <h4>Phở Bò Gân</h4>
+                                <p>Mì phở với thịt bò gân hầm mềm, nước dùng đậm đà và gia vị hòa quyện.</p>
+                                <p class="price">Giá: 60,000 VNĐ</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="menu-item">
+                                <img src="images/pho-bo-tai-lan.jpg" alt="Phở Bò Tái Lăn" class="img-fluid">
+                                <h4>Phở Bò Tái Lăn</h4>
+                                <p>Mì phở với thịt bò tái lăn qua dầu, nước dùng đậm đà và nhiều gia vị.</p>
+                                <p class="price">Giá: 65,000 VNĐ</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- Phở Gà -->
+                <section class="menu-category mb-5">
+                    <h3 class="category-title"> Phở Gà</h3>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="menu-item">
+                                <img src="images/pho-ga-luoc.jpg" alt="Phở Gà Luộc" class="img-fluid">
+                                <h4>Phở Gà Luộc</h4>
+                                <p>Mì phở với thịt gà luộc, nước dùng trong và thanh mát, kèm rau thơm và gia vị.</p>
+                                <p class="price">Giá: 50,000 VNĐ</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="menu-item">
+                                <img src="images/pho-ga-xe.jpg" alt="Phở Gà Xé" class="img-fluid">
+                                <h4>Phở Gà Xé</h4>
+                                <p>Mì phở với thịt gà xé nhỏ, nước dùng đậm đà và hương vị đặc trưng.</p>
+                                <p class="price">Giá: 55,000 VNĐ</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="menu-item">
+                                <img src="images/pho-ga-tron.jpg" alt="Phở Gà Trộn" class="img-fluid">
+                                <h4>Phở Gà Trộn</h4>
+                                <p>Mì phở kết hợp với thịt gà nướng tỏi, nước sốt đặc biệt và gia vị hòa quyện.</p>
+                                <p class="price">Giá: 60,000 VNĐ</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="menu-item">
+                                <img src="images/pho-ga-ca-ri.jpg" alt="Phở Gà Cà Ri" class="img-fluid">
+                                <h4>Phở Gà Cà Ri</h4>
+                                <p>Mì phở với thịt gà cà ri, nước dùng đậm đà và hương vị cà ri đặc trưng.</p>
+                                <p class="price">Giá: 65,000 VNĐ</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Phở Hải Sản -->
+                <section class="menu-category mb-5">
+                    <h3 class="category-title"> Phở Hải Sản</h3>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="menu-item">
+                                <img src="images/pho-hai-san-dac-biet.jpg" alt="Phở Hải Sản Đặc Biệt" class="img-fluid">
+                                <h4>Phở Hải Sản Đặc Biệt</h4>
+                                <p>Mì phở với tôm, mực, cá và các loại hải sản khác, nước dùng đậm đà và thơm ngon.</p>
+                                <p class="price">Giá: 70,000 VNĐ</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="menu-item">
+                                <img src="images/pho-tom.jpg" alt="Phở Tôm" class="img-fluid">
+                                <h4>Phở Tôm</h4>
+                                <p>Mì phở với tôm tươi, nước dùng đậm đà và hương vị tôm tự nhiên.</p>
+                                <p class="price">Giá: 60,000 VNĐ</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="menu-item">
+                                <img src="images/pho-muc.jpg" alt="Phở Mực" class="img-fluid">
+                                <h4>Phở Mực</h4>
+                                <p>Mì phở với mực tươi, nước dùng đậm đà và hương vị mực thơm ngon.</p>
+                                <p class="price">Giá: 65,000 VNĐ</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="menu-item">
+                                <img src="images/pho-ca.jpg" alt="Phở Cá" class="img-fluid">
+                                <h4>Phở Cá</h4>
+                                <p>Mì phở với cá tươi, nước dùng đậm đà và hương vị cá tự nhiên.</p>
+                                <p class="price">Giá: 70,000 VNĐ</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-light py-4">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-4 mb-3">
+
+                        <h5>Đặt bàn ngay</h5>
+                        <li><a href="reservation.html" class="text-light">Đặt Bàn</a></li>
+
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <h5>Thông Tin Liên Hệ</h5>
+                        <p>Email: <a href="mailto:nhahangpho@gmail.com" class="text-light">nhahangpho@gmail.com</a></p>
+                        <p>Điện Thoại: <a href="tel:+84123456789" class="text-light">+84 123 456 789</a></p>
+                        <p>Địa Chỉ: 123 Đường Phở, Quận 1, TP. Hồ Chí Minh, Việt Nam</p>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <h5>Kết Nối Với Chúng Tôi</h5>
+                        <p>
+                            <li><a href="contact.html" class="text-light">Contact</a></li>
+                        </p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p>&copy; 2024 Nhà Hàng Phở</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Slick Slider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Slick Slider Initialization -->
+    <script src="js/animationslide.js"></script>
+</body>
+
+</html>
